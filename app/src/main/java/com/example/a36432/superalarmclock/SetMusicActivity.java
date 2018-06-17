@@ -8,6 +8,10 @@ import android.widget.Button;
 
 public class SetMusicActivity extends AppCompatActivity {
     private Button fav;
+    private Button res;
+    private Button apl;
+    private Button bui;
+
     private Button mobile;
     private Button built;
     private Button fri;
@@ -23,6 +27,10 @@ public class SetMusicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_set_music);
 
         fav=(Button)findViewById(R.id.btn_favor);
+        apl=(Button)findViewById(R.id.btn_phone);
+        res=(Button)findViewById(R.id.btn_initial);
+        bui=(Button)findViewById(R.id.btn_in);
+
         home=(Button)findViewById(R.id.btn_home);
         note=(Button)findViewById(R.id.btn_memo);
         weather=(Button)findViewById(R.id.btn_weather);
@@ -36,6 +44,34 @@ public class SetMusicActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        apl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(SetMusicActivity.this, SetMusicApplyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        res.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(SetMusicActivity.this, SetMusicResetActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        bui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(SetMusicActivity.this, SetMusicBulitinActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
