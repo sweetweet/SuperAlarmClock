@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetBackActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e3170d"
+            android:text="red" />
+
+        <Button
+            android:id="@+id/btn_yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffd700"
+            android:text="yellow" />
+
+        <Button
+            android:id="@+id/btn_blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#87cee8"
+            android:text="blue" />
+
+        <Button
+            android:id="@+id/btn_orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff8000"
+            android:text="orange" />
+
+        <Button
+            android:id="@+id/btn_pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffC0B0"
+            android:text="pink" />
+
+        <Button
+            android:id="@+id/btn_purple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#da70d6"
+            android:text="purple" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="214dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_memo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="備忘錄" />
+
+            <Button
+                android:id="@+id/btn_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="探索" />
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="主頁" />
+
+            <Button
+                android:id="@+id/btn_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#87cee8"
+                android:layout_weight="1"
+                android:text="設定" />
+
+            <Button
+                android:id="@+id/btn_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="天氣" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
