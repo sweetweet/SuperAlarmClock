@@ -24,7 +24,8 @@
         <activity android:name=".SetMusicActivity" />
         <activity android:name=".SetMusicFavoritesActivity" />
         <activity android:name=".SetBackActivity" />
-        <activity android:name=".WeatherActivity"></activity>
+        <activity android:name=".WeatherActivity" />
+        <activity android:name=".WakeupActivity"></activity>
     </application>
 
 </manifest>

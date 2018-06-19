@@ -148,6 +148,9 @@ public class NoteActivity extends Activity implements  OnItemClickListener, OnIt
                 null, null);
 
         while (cursor.moveToNext()) {
+            System.out.println("content columnindex"+cursor.getColumnIndex("content"));
+            System.out.println("data columnindex"+cursor.getColumnIndex("data"));
+
             String name = cursor.getString(cursor.getColumnIndex("content"));
             String date = cursor.getString(cursor.getColumnIndex("date"));
             Map<String, Object> map = new HashMap<String, Object>();

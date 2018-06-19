@@ -1,26 +1,86 @@
 package com.example.a36432.superalarmclock;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.app.TimePickerDialog;
+import android.content.BroadcastReceiver;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AnalogClock;
 import android.widget.Button;
+import android.widget.TimePicker;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     private Button note;
     private Button set;
     private Button weather;
     private Button explore;
+    AnalogClock clock;
+
+    String DATABASETABLE = "clock";
+    String DATABASE_CREATETABLE = "create table notetable (title, content);";
+    ClockDB helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        note=(Button)findViewById(R.id.btn_memo);
-        set=(Button)findViewById(R.id.btn_set);
-        weather=(Button)findViewById(R.id.btn_weather);
-        explore=(Button)findViewById(R.id.btn_exp);
+        note = (Button) findViewById(R.id.btn_memo);
+        set = (Button) findViewById(R.id.btn_set);
+        weather = (Button) findViewById(R.id.btn_weather);
+        explore = (Button) findViewById(R.id.btn_exp);
+        clock = (AnalogClock) findViewById(R.id.Clock);
+
+        clock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar c = Calendar.getInstance();
+                final int hour = c.get(Calendar.HOUR_OF_DAY);
+                int minute = c.get(Calendar.MINUTE);
+                // Create a new instance of TimePickerDialog and return it
+                new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minutes) {
+                        /*SQLiteDatabase db = helper.getReadableDatabase();
+                        ContentValues cv = new ContentValues();
+                        cv.put("hour", hourOfDay);
+                        cv.put("minute", minutes);
+                        db.insert(DATABASETABLE, null, cv);*/
+                        registerReceiver(new PlayReceiver() , new IntentFilter("clock"));
+
+
+
+                        Calendar mCal = Calendar.getInstance();
+
+                        mCal.setTimeInMillis(System.currentTimeMillis());
+                        mCal.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                        mCal.set(Calendar.MINUTE,minutes);
+                        mCal.set(Calendar.SECOND,00);
+                        Intent intentAlarm = new Intent("clock");
+
+
+                        PendingIntent pi = PendingIntent.getBroadcast(MainActivity.this, 1, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT);
+                        AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(Context.ALARM_SERVICE);
+
+
+                        am.setRepeating(AlarmManager.RTC_WAKEUP, mCal.getTimeInMillis(),AlarmManager.INTERVAL_DAY, pi);
+
+                    }
+                }, hour, minute, true).show();
+            }
+
+        });
 
         note.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +123,37 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    class ClockDB extends SQLiteOpenHelper {
+        public ClockDB(Context context) {
+            super(context, "clock.db", null, 1);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL(DATABASE_CREATETABLE);
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+        }
+    }
+
+    public class PlayReceiver extends BroadcastReceiver {
 
 
+
+        @Override
+        public void onReceive(Context context, Intent intent)
+        {
+
+            System.out.println("get receive");
+
+            Intent intent2 = new Intent(MainActivity.this,WakeupActivity.class);
+            startActivity(intent2);
+
+        }
     }
 }
