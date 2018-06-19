@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class SetMusicFavoritesActivity extends AppCompatActivity {
+public class SetMusicBulitinActivity extends AppCompatActivity{
     private Button note;
     private Button set;
     private Button home;
@@ -15,7 +15,7 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_set_music_favorites);
+        setContentView(R.layout.activity_set_music_bulitin);
 
         note=(Button)findViewById(R.id.btn_memo);
         set=(Button)findViewById(R.id.btn_set);
@@ -26,7 +26,7 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(SetMusicFavoritesActivity.this, NoteActivity.class);
+                intent.setClass(SetMusicBulitinActivity.this, NoteActivity.class);
                 startActivity(intent);
 
             }
@@ -36,7 +36,7 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(SetMusicFavoritesActivity.this, SetActivity.class);
+                intent.setClass(SetMusicBulitinActivity.this, SetActivity.class);
                 startActivity(intent);
 
             }
@@ -46,7 +46,7 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(SetMusicFavoritesActivity.this, MainActivity.class);
+                intent.setClass(SetMusicBulitinActivity.this, MainActivity.class);
                 startActivity(intent);
 
             }
@@ -56,10 +56,11 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(SetMusicFavoritesActivity.this, ExploreActivity.class);
+                intent.setClass(SetMusicBulitinActivity.this, ExploreActivity.class);
                 startActivity(intent);
 
             }
         });
     }
 }
+
