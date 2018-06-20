@@ -40,5 +40,4 @@
         <activity android:name=".WeatherActivity" />
         <activity android:name=".WakeupActivity"></activity>
     </application>
-
 </manifest>
