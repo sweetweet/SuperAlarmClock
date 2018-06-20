@@ -94,15 +94,7 @@ public class SetActivity extends AppCompatActivity {
             }
         });
 
-        explore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(SetActivity.this, ExploreActivity.class);
-                startActivity(intent);
 
-            }
-        });
 
 
     }

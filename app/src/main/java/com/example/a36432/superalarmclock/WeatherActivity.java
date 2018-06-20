@@ -20,7 +20,6 @@ public class WeatherActivity extends AppCompatActivity {
         note=(Button)findViewById(R.id.btn_memo);
         set=(Button)findViewById(R.id.btn_set);
         home=(Button)findViewById(R.id.btn_home);
-        int i;
 
 
         note.setOnClickListener(new View.OnClickListener() {
