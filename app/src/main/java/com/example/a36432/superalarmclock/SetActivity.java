@@ -13,6 +13,7 @@ public class SetActivity extends AppCompatActivity {
     private Button weather;
     private Button home;
     private Button explore;
+    private Button inv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class SetActivity extends AppCompatActivity {
         note=(Button)findViewById(R.id.btn_memo);
         weather=(Button)findViewById(R.id.btn_weather);
         explore=(Button)findViewById(R.id.btn_exp);
+        inv=(Button)findViewById(R.id.btn_invite);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,17 @@ public class SetActivity extends AppCompatActivity {
                 intent.setClass(SetActivity.this, SetMusicActivity.class);
                 startActivity(intent);
                 //finish();
+
+            }
+        });
+
+        inv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(SetActivity.this, ShareActivity.class);
+                startActivity(intent);
+               // finish();
 
             }
         });

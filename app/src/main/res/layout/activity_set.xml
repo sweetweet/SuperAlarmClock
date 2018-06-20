@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="邀請朋友"
-            android:textSize="24sp" />
+            android:textSize="24sp"/>
 
         <Button
             android:id="@+id/btn_service"
