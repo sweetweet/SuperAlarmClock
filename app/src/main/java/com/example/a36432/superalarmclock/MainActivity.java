@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                         am.setRepeating(AlarmManager.RTC_WAKEUP, mCal.getTimeInMillis(),AlarmManager.INTERVAL_DAY, pi);
-                        Toast.makeText(MainActivity.this, "设置闹钟的时间为："+String.valueOf(hourOfDay)+":"+String.valueOf(minutes), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "設置鬧鐘的時間為："+String.valueOf(hourOfDay)+":"+String.valueOf(minutes), Toast.LENGTH_SHORT).show();
 
                     }
                 }, hour, minute, true).show();
