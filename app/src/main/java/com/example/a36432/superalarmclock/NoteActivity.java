@@ -43,7 +43,6 @@ public class NoteActivity extends Activity implements  OnItemClickListener, OnIt
     private Button home;
     private Button set;
     private Button weather;
-    private Button explore;
 
 
     @Override
@@ -58,7 +57,6 @@ public class NoteActivity extends Activity implements  OnItemClickListener, OnIt
         home = (Button) findViewById(R.id.btn_home);
         set = (Button) findViewById(R.id.btn_set);
         weather = (Button) findViewById(R.id.btn_weather);
-        explore = (Button) findViewById(R.id.btn_exp);
 
 
         home.setOnClickListener(new View.OnClickListener() {
@@ -92,15 +90,6 @@ public class NoteActivity extends Activity implements  OnItemClickListener, OnIt
             }
         });
 
-        explore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(NoteActivity.this, ExploreActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
 
         addNote = (Button) findViewById(R.id.btn_editnote);

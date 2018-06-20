@@ -12,14 +12,10 @@ public class SetMusicActivity extends AppCompatActivity {
     private Button apl;
     private Button bui;
 
-    private Button mobile;
-    private Button built;
-    private Button fri;
 
     private Button note;
     private Button weather;
     private Button home;
-    private Button explore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +30,6 @@ public class SetMusicActivity extends AppCompatActivity {
         home=(Button)findViewById(R.id.btn_home);
         note=(Button)findViewById(R.id.btn_memo);
         weather=(Button)findViewById(R.id.btn_weather);
-        explore=(Button)findViewById(R.id.btn_exp);
-
-        fav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(SetMusicActivity.this, SetMusicFavoritesActivity.class);
-                startActivity(intent);
-            }
-        });
 
         apl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,12 +40,25 @@ public class SetMusicActivity extends AppCompatActivity {
             }
         });
 
+        fav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(SetMusicActivity.this, SetMusicFavoritesActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
         res.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(SetMusicActivity.this, SetMusicResetActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -67,8 +66,9 @@ public class SetMusicActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(SetMusicActivity.this, SetMusicBulitinActivity.class);
+                intent.setClass(SetMusicActivity.this, SetMusicBuiltinActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -106,14 +106,5 @@ public class SetMusicActivity extends AppCompatActivity {
             }
         });
 
-        explore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(SetMusicActivity.this, ExploreActivity.class);
-                startActivity(intent);
-
-            }
-        });
     }
 }

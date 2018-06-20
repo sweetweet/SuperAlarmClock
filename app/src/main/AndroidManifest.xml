@@ -19,10 +19,12 @@
         <activity android:name=".SetActivity" />
         <activity android:name=".NoteActivity" />
         <activity android:name=".NoteEditActivity" />
-        <activity android:name=".ExploreActivity" />
         <activity android:name=".NoteItemActivity" />
         <activity android:name=".SetMusicActivity" />
         <activity android:name=".SetMusicFavoritesActivity" />
+        <activity android:name=".SetMusicBuiltinActivity" />
+        <activity android:name=".SetMusicResetActivity" />
+        <activity android:name=".SetMusicApplyActivity" />
         <activity android:name=".SetBackActivity" />
         <activity android:name=".WeatherActivity" />
         <activity android:name=".WakeupActivity"></activity>

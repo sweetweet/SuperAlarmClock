@@ -10,7 +10,7 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
     private Button note;
     private Button set;
     private Button home;
-    private Button explore;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,6 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
         note=(Button)findViewById(R.id.btn_memo);
         set=(Button)findViewById(R.id.btn_set);
         home=(Button)findViewById(R.id.btn_home);
-        explore=(Button)findViewById(R.id.btn_exp);
 
         note.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,14 +51,6 @@ public class SetMusicFavoritesActivity extends AppCompatActivity {
             }
         });
 
-        explore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(SetMusicFavoritesActivity.this, ExploreActivity.class);
-                startActivity(intent);
 
-            }
-        });
     }
 }

@@ -6,27 +6,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ExploreActivity extends AppCompatActivity {
+public class SetMusicBuiltinActivity extends AppCompatActivity{
     private Button note;
     private Button set;
-    private Button weather;
     private Button home;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explore);
+        setContentView(R.layout.activity_set_music_builtin);
 
         note=(Button)findViewById(R.id.btn_memo);
         set=(Button)findViewById(R.id.btn_set);
-        weather=(Button)findViewById(R.id.btn_weather);
         home=(Button)findViewById(R.id.btn_home);
 
         note.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(ExploreActivity.this, NoteActivity.class);
+                intent.setClass(SetMusicBuiltinActivity.this, NoteActivity.class);
                 startActivity(intent);
 
             }
@@ -36,17 +35,7 @@ public class ExploreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(ExploreActivity.this, SetActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        weather.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(ExploreActivity.this, WeatherActivity.class);
+                intent.setClass(SetMusicBuiltinActivity.this, SetActivity.class);
                 startActivity(intent);
 
             }
@@ -56,14 +45,13 @@ public class ExploreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(ExploreActivity.this, MainActivity.class);
+                intent.setClass(SetMusicBuiltinActivity.this, MainActivity.class);
                 startActivity(intent);
 
             }
         });
 
 
-
-
     }
 }
+

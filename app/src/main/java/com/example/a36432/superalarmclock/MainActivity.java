@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private Button note;
     private Button set;
     private Button weather;
-    private Button explore;
     AnalogClock clock;
 
     String DATABASETABLE = "clock";
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         note = (Button) findViewById(R.id.btn_memo);
         set = (Button) findViewById(R.id.btn_set);
         weather = (Button) findViewById(R.id.btn_weather);
-        explore = (Button) findViewById(R.id.btn_exp);
         clock = (AnalogClock) findViewById(R.id.Clock);
 
         clock.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 final int hour = c.get(Calendar.HOUR_OF_DAY);
                 int minute = c.get(Calendar.MINUTE);
                 // Create a new instance of TimePickerDialog and return it
+
                 new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     public void onTimeSet(TimePicker view, int hourOfDay, int minutes) {
                         /*SQLiteDatabase db = helper.getReadableDatabase();
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                         cv.put("minute", minutes);
                         db.insert(DATABASETABLE, null, cv);*/
                         registerReceiver(new PlayReceiver() , new IntentFilter("clock"));
-
 
 
                         Calendar mCal = Calendar.getInstance();
@@ -112,15 +110,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        explore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, ExploreActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
 
     }
@@ -142,8 +131,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public class PlayReceiver extends BroadcastReceiver {
-
-
 
         @Override
         public void onReceive(Context context, Intent intent)

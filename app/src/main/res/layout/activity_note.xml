@@ -55,12 +55,6 @@
             android:background="#87cee8"
             android:text="備忘錄" />
 
-        <Button
-            android:id="@+id/btn_exp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="探索" />
 
         <Button
             android:id="@+id/btn_home"

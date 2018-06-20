@@ -17,7 +17,6 @@ public class SetBackActivity extends AppCompatActivity {
     private Button note;
     private Button weather;
     private Button home;
-    private Button explore;
 
 
 
@@ -34,7 +33,6 @@ public class SetBackActivity extends AppCompatActivity {
         home=(Button)findViewById(R.id.btn_home);
         note=(Button)findViewById(R.id.btn_memo);
         weather=(Button)findViewById(R.id.btn_weather);
-        explore=(Button)findViewById(R.id.btn_exp);
 
         red.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,15 +107,6 @@ public class SetBackActivity extends AppCompatActivity {
             }
         });
 
-        explore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(SetBackActivity.this, ExploreActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
     }
 }

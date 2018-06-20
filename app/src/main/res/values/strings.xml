@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SuperAlarmClock</string>
+    <string name="setting1">setting1</string>
 </resources>
