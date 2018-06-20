@@ -11,52 +11,91 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_red"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#e3170d"
-            android:text="red" />
+            android:layout_height="550dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_yellow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffd700"
-            android:text="yellow" />
+            <Button
+                android:id="@+id/btn_red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#e3170d"
+                android:text="red"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/btn_blue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#87cee8"
-            android:text="blue" />
+            <Button
+                android:id="@+id/btn_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffd700"
+                android:text="yellow"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/btn_orange"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ff8000"
-            android:text="orange" />
+            <Button
+                android:id="@+id/btn_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#87cee8"
+                android:text="blue"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/btn_pink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffC0B0"
-            android:text="pink" />
+            <Button
+                android:id="@+id/btn_orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#ff8000"
+                android:text="orange"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/btn_purple"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#da70d6"
-            android:text="purple" />
+            <Button
+                android:id="@+id/btn_pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#ffC0B0"
+                android:typeface="sans"
+                android:text="pink"
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="214dp" />
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#da70d6"
+                android:text="purple"
+                android:typeface="sans"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,7 +107,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="備忘錄" />
+                android:text="備忘錄"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
 
             <Button
@@ -76,22 +117,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="主頁" />
+                android:text="主頁"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btn_set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#87cee8"
                 android:layout_weight="1"
-                android:text="設定" />
+                android:background="@drawable/btn_shape"
+                android:text="設定"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btn_weather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="天氣" />
+                android:text="天氣"
+                android:typeface="sans"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

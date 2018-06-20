@@ -12,7 +12,6 @@ public class SetActivity extends AppCompatActivity {
     private Button note;
     private Button weather;
     private Button home;
-    private Button explore;
     private Button inv;
 
     @Override
@@ -25,7 +24,6 @@ public class SetActivity extends AppCompatActivity {
         home=(Button)findViewById(R.id.btn_home);
         note=(Button)findViewById(R.id.btn_memo);
         weather=(Button)findViewById(R.id.btn_weather);
-        explore=(Button)findViewById(R.id.btn_exp);
         inv=(Button)findViewById(R.id.btn_invite);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -90,16 +88,6 @@ public class SetActivity extends AppCompatActivity {
                 intent.setClass(SetActivity.this, NoteActivity.class);
                 startActivity(intent);
                 //finish();
-
-            }
-        });
-
-        explore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(SetActivity.this, ExploreActivity.class);
-                startActivity(intent);
 
             }
         });

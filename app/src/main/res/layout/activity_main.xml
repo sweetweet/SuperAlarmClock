@@ -18,10 +18,11 @@
         <AnalogClock
             android:id="@+id/Clock"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="293dp"
 
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp" />
 
     </LinearLayout>
 
@@ -39,7 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="備忘錄" />
+            android:text="備忘錄"
+            android:typeface="sans"
+            android:textSize="18sp" />
 
 
         <Button
@@ -47,22 +50,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#87cee8"
-            android:text="主頁" />
+            android:background="@drawable/btn_shape"
+            android:text="主頁"
+            android:typeface="sans"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btn_set"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="設定" />
+            android:text="設定"
+            android:typeface="sans"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btn_weather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="天氣" />
+            android:text="天氣"
+            android:typeface="sans"
+            android:textSize="18sp" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -31,36 +31,40 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+
             <Button
                 android:id="@+id/btn_memo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="備忘錄" />
-            
+                android:text="備忘錄"
+                android:textSize="18sp" />
+
 
             <Button
                 android:id="@+id/btn_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="主頁" />
+                android:text="主頁"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btn_set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/btn_shape"
                 android:layout_weight="1"
-                android:text="設定" />
+                android:text="設定"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btn_weather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#87cee8"
                 android:layout_weight="1"
-                android:text="天氣" />
-        </LinearLayout>
+                android:text="天氣"
+                android:textSize="18sp" />        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -11,34 +11,64 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_in"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="內建鈴聲" />
+            android:layout_height="550dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="套用手機內鈴聲" />
+            <Button
+                android:id="@+id/btn_in"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_shape2"
+                android:text="內建鈴聲"
+                android:typeface="sans"
+                android:textSize="28sp" />
 
-        <Button
-            android:id="@+id/btn_initial"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="初始化" />
+            <Button
+                android:id="@+id/btn_phone"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_shape2"
+                android:text="套用手機內鈴聲"
+                android:typeface="sans"
+                android:textSize="28sp" />
 
-        <Button
-            android:id="@+id/btn_favor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="我的最愛" />
+            <Button
+                android:id="@+id/btn_initial"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_shape2"
+                android:text="初始化"
+                android:typeface="sans"
+                android:textSize="28sp" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="360dp" />
+            <Button
+                android:id="@+id/btn_favor"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_shape2"
+                android:text="我的最愛"
+                android:typeface="sans"
+                android:textSize="28sp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +81,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="備忘錄" />
+                android:text="備忘錄"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
 
             <Button
@@ -59,22 +91,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="主頁" />
+                android:text="主頁"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btn_set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#87cee8"
-                android:text="設定" />
+                android:background="@drawable/btn_shape"
+                android:text="設定"
+                android:typeface="sans"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/btn_weather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="天氣" />
+                android:text="天氣"
+                android:typeface="sans"
+                android:textSize="18sp" />
         </LinearLayout>
+
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

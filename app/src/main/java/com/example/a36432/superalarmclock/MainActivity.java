@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Build;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.widget.AnalogClock;
 import android.widget.Button;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -58,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                         db.insert(DATABASETABLE, null, cv);*/
                         registerReceiver(new PlayReceiver() , new IntentFilter("clock"));
 
-
                         Calendar mCal = Calendar.getInstance();
 
                         mCal.setTimeInMillis(System.currentTimeMillis());
@@ -67,15 +68,19 @@ public class MainActivity extends AppCompatActivity {
                         mCal.set(Calendar.SECOND,00);
                         Intent intentAlarm = new Intent("clock");
 
-
-                        PendingIntent pi = PendingIntent.getBroadcast(MainActivity.this, 1, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT);
                         AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(Context.ALARM_SERVICE);
+
+                      PendingIntent pi = PendingIntent.getBroadcast(MainActivity.this, 1, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT);
+
 
 
                         am.setRepeating(AlarmManager.RTC_WAKEUP, mCal.getTimeInMillis(),AlarmManager.INTERVAL_DAY, pi);
+                        Toast.makeText(MainActivity.this, "设置闹钟的时间为："+String.valueOf(hourOfDay)+":"+String.valueOf(minutes), Toast.LENGTH_SHORT).show();
 
                     }
                 }, hour, minute, true).show();
+
+
             }
 
         });
