@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SuperAlarmClock</string>
     <string name="setting1">setting1</string>
+    <string name="關閉鬧鐘">關閉鬧鐘</string>
 </resources>

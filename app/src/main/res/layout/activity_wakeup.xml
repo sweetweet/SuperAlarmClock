@@ -13,24 +13,80 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="245dp">
 
+
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="141dp"
-            android:layout_margin="50dp"
-            android:text="起床了北七"
-            android:textSize="50dp"
-            tools:layout_editor_absoluteX="79dp"
-            tools:layout_editor_absoluteY="168dp" />
+            android:layout_width="150dp"
+            android:layout_height="91dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="早安"
+            android:textColor="#ff9966"
+            android:textSize="125px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.165" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="127dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btn_shape2"
+            android:text="關閉鬧鐘"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.874" />
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
+            android:layout_width="175dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="別忘了"
+            android:textColor="#ff9999"
+            android:textSize="70px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.369" />
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="277dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+
+            android:gravity="center"
+            android:textSize="60px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="240dp"
             android:orientation="horizontal">
 
             <Button
