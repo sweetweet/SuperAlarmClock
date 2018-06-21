@@ -46,7 +46,6 @@ public class SetBackActivity extends AppCompatActivity {
 
                 Intent intent = new Intent();
                 intent.setClass(SetBackActivity.this, MainActivity.class);
-                background.setBackgroundColor(Color.RED);
                 startActivity(intent);
 
             }

@@ -1,6 +1,8 @@
 package com.example.a36432.superalarmclock;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,7 @@ public class SetActivity extends AppCompatActivity {
     private Button weather;
     private Button home;
     private Button inv;
+    private Button service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,8 @@ public class SetActivity extends AppCompatActivity {
         home=(Button)findViewById(R.id.btn_home);
         note=(Button)findViewById(R.id.btn_memo);
         weather=(Button)findViewById(R.id.btn_weather);
-        inv=(Button)findViewById(R.id.btn_service);
+        inv=(Button)findViewById(R.id.btn_invite);
+        service=(Button)findViewById(R.id.btn_service);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +96,16 @@ public class SetActivity extends AppCompatActivity {
             }
         });
 
+        service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(SetActivity.this).setTitle("服務中心").setMessage("聯絡我們: ms0004284@gmail.com").setPositiveButton("確認", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
+                    }
+                }).show();
+            }
+        });
     }
 }
