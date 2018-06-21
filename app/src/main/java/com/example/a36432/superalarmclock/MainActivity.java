@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,10 +19,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AnalogClock;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
+
+import static android.graphics.Color.parseColor;
 
 public class MainActivity extends AppCompatActivity {
     private Button note;
@@ -118,6 +122,29 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        final LinearLayout background = (LinearLayout)findViewById(R.id.back);
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+        if (data==null){
+            return;
+        }
+        Bundle bundle =this.getIntent().getExtras();
+
+        int id = bundle.getInt("ID");
+        switch(id){
+            case R.id.btn_red:
+                background.setBackgroundColor(parseColor("#e3170d"));
+               break;
+        }
+
+    }
+
+
 
     class ClockDB extends SQLiteOpenHelper {
         public ClockDB(Context context) {

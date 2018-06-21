@@ -24,7 +24,7 @@ public class SetActivity extends AppCompatActivity {
         home=(Button)findViewById(R.id.btn_home);
         note=(Button)findViewById(R.id.btn_memo);
         weather=(Button)findViewById(R.id.btn_weather);
-        inv=(Button)findViewById(R.id.btn_invite);
+        inv=(Button)findViewById(R.id.btn_service);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

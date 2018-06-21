@@ -37,8 +37,16 @@ public class SetBackActivity extends AppCompatActivity {
         red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(SetBackActivity.this, MainActivity.class);
+                int id = v.getId();
+                Intent intent ;
+               // intent.putExtra("ID",id);
+               // intent.setClass(SetBackActivity.this, MainActivity.class);
+
+                intent = new Intent(SetBackActivity.this, MainActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("ID", id);
+                //bundle.putDouble("py", py);
+                intent.putExtras(bundle);
                 startActivity(intent);
 
             }
