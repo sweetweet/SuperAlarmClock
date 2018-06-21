@@ -25,8 +25,14 @@ public class SetBackActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_back);
+        Color color = new Color();
+
+        final LinearLayout background = (LinearLayout) findViewById(R.id.linearLayout);
+        //View root = someView.getRootView();
+
 
         red=(Button)findViewById(R.id.btn_red);
+
         yellow=(Button)findViewById(R.id.btn_yellow);
         blue=(Button)findViewById(R.id.btn_blue);
         orange=(Button)findViewById(R.id.btn_orange);
@@ -39,6 +45,7 @@ public class SetBackActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(SetBackActivity.this, MainActivity.class);
+                background.setBackgroundColor(Color.RED);
                 startActivity(intent);
 
             }
