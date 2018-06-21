@@ -22,7 +22,7 @@ public class WakeupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_wakeup);
 
         String msg = "";
-        Button stop_btn = (Button)findViewById(R.id.btn_stop);
+        Button stop_btn = (Button)findViewById(R.id.btn_stopp);
         TextView tv_msg = (TextView)findViewById(R.id.tv_note);
 
         DB = new NoteDB(this);
