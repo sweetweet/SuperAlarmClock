@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="245dp">
+        tools:layout_editor_absoluteY="0dp">
 
 
         <TextView
@@ -21,43 +21,29 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="40dp"
             android:text="早安"
             android:textColor="#ff9966"
             android:textSize="125px"
+            android:gravity="center"
+            android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.165" />
 
-        <Button
-            android:id="@+id/btn_stop"
-            android:layout_width="127dp"
-            android:layout_height="66dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/btn_shape2"
-            android:text="關閉鬧鐘"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.874" />
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="175dp"
             android:layout_height="62dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="24dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:gravity="center"
             android:text="別忘了"
+            android:layout_gravity="center"
             android:textColor="#ff9999"
             android:textSize="70px"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +60,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-
+            android:layout_gravity="center"
             android:gravity="center"
             android:textSize="60px"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -82,47 +68,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/btn_stopp"
+            android:layout_width="127dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_shape2"
+            android:text="關閉鬧鐘"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.874" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="240dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_memo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="備忘錄"
-                android:textSize="18sp" />
-
-
-            <Button
-                android:id="@+id/btn_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="主頁"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/btn_set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_shape"
-                android:text="設定"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/btn_weather"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="天氣"
-                android:textSize="18sp" />
-        </LinearLayout>
 
     </LinearLayout>
 
