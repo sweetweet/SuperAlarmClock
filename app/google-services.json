@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "536703934634",
+    "firebase_url": "https://clock-87f65.firebaseio.com",
+    "project_id": "clock-87f65",
+    "storage_bucket": "clock-87f65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536703934634:android:5a3f441ea965a191",
+        "android_client_info": {
+          "package_name": "com.example.a36432.superalarmclock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536703934634-3sgrnnmhi7mpinbsamno9p8kg0fnq2ip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a36432.superalarmclock",
+            "certificate_hash": "3ff8b3f2287d3d2c59be093db8b873a242ba7d2d"
+          }
+        },
+        {
+          "client_id": "536703934634-n4teber35higggmsb9qqsio7ljsn878s.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "536703934634-n4teber35higggmsb9qqsio7ljsn878s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrWY07C9MQifMw1rojZNSR1SnTCnc4YYY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536703934634-n4teber35higggmsb9qqsio7ljsn878s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

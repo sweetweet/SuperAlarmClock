@@ -45,7 +45,49 @@ public class MainActivity extends AppCompatActivity {
         note = (Button) findViewById(R.id.btn_memo);
         set = (Button) findViewById(R.id.btn_set);
         weather = (Button) findViewById(R.id.btn_weather);
-        
+        clock = (AnalogClock) findViewById(R.id.Clock);
+
+        clock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar c = Calendar.getInstance();
+                final int hour = c.get(Calendar.HOUR_OF_DAY);
+                int minute = c.get(Calendar.MINUTE);
+                // Create a new instance of TimePickerDialog and return it
+
+                new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minutes) {
+                        /*SQLiteDatabase db = helper.getReadableDatabase();
+                        ContentValues cv = new ContentValues();
+                        cv.put("hour", hourOfDay);
+                        cv.put("minute", minutes);
+                        db.insert(DATABASETABLE, null, cv);*/
+                        registerReceiver(new PlayReceiver() , new IntentFilter("clock"));
+
+                        Calendar mCal = Calendar.getInstance();
+
+                        mCal.setTimeInMillis(System.currentTimeMillis());
+                        mCal.set(Calendar.HOUR_OF_DAY,hourOfDay);
+                        mCal.set(Calendar.MINUTE,minutes);
+                        mCal.set(Calendar.SECOND,00);
+                        Intent intentAlarm = new Intent("clock");
+
+                        AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(Context.ALARM_SERVICE);
+
+                        PendingIntent pi = PendingIntent.getBroadcast(MainActivity.this, 1, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT);
+
+
+
+                        am.setRepeating(AlarmManager.RTC_WAKEUP, mCal.getTimeInMillis(),AlarmManager.INTERVAL_DAY, pi);
+                        Toast.makeText(MainActivity.this, "設置鬧鐘的時間為："+String.valueOf(hourOfDay)+":"+String.valueOf(minutes), Toast.LENGTH_SHORT).show();
+
+                    }
+                }, hour, minute, true).show();
+
+
+            }
+
+        });
 
         note.setOnClickListener(new View.OnClickListener() {
             @Override
